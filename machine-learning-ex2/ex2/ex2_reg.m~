@@ -57,7 +57,7 @@ hold off;
 % term is handled
 X = mapFeature(X(:,1), X(:,2));
 
-% Initialize fitting parameters (initial theta is zero array)
+% Initialize fitting parameters (initial theta 
 initial_theta = zeros(size(X, 2), 1);
 
 % Set regularization parameter lambda to 1

@@ -8,11 +8,9 @@ m = length(y); % number of training examples
 J_history = zeros(num_iters, 1);
 
 for iter = 1:num_iters
-    holder = theta;
     
-    for i=1:length(theta)
-        theta(i) = holder(i)-(alpha/m)*(sum((X*holder-y).*X(:,i)));
-    end
+    delta = ((theta' * X' - y')*X)';
+    theta = theta - alpha / m * delta;
     
     % Save the cost J in every iteration    
     J_history(iter) = computeCostMulti(X, y, theta);

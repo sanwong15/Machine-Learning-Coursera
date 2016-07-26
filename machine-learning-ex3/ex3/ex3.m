@@ -1,5 +1,7 @@
 %% Machine Learning Online Class - Exercise 3 | Part 1: One-vs-all
 
+% San Wong (hswong1@uci.edu)
+
 %  Instructions
 %  ------------
 % 

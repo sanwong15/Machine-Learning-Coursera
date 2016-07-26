@@ -1,6 +1,7 @@
 %% Machine Learning Class - Exercise 2: Logistic Regression
 %  San Wong (hswong1@uci.edu)
-%  Instructions
+%  ## Build a logistic regression model to predict whether a student gets
+%  admitted into a university
 %
 %     sigmoid.m
 %     costFunction.m
@@ -15,7 +16,8 @@ clear ; close all; clc
 %  contains the label.
 
 data = load('ex2data1.txt');
-X = data(:, [1, 2]); y = data(:, 3);
+X = data(:, [1, 2]); y = data(:, 3); % Y is either 1 or 0, representing YES or NO
+% X is the result of two exams
 
 %% ==================== Part 1: Plotting ====================
 %  We start the exercise by first plotting the data to understand the 
