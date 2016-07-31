@@ -36,7 +36,12 @@ grad = zeros(size(theta));
 %           grad = grad + YOUR_CODE_HERE (using the temp variable)
 %
 
+h = sigmoid(X*theta);
+theta1 = [0;theta(2:end)]; % for i = 0, it remains zeros. so we create a new theta that starts from i=1, which will be trained
+J = (1/m)*((-y)'*(log(h))-(1-y)'*(log(1-h)))+(lambda/(2*m))*(theta1'*theta1);
 
+% Grad
+grad = (1/m)*(X'*(h - y))+(lambda/m)*theta1;
 
 
 

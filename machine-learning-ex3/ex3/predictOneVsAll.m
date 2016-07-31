@@ -12,7 +12,7 @@ m = size(X, 1);
 num_labels = size(all_theta, 1);
 
 % You need to return the following variables correctly 
-p = zeros(size(X, 1), 1);
+p = zeros(size(X, 1), 1); % Predict result
 
 % Add ones to the X data matrix
 X = [ones(m, 1) X];
@@ -30,13 +30,10 @@ X = [ones(m, 1) X];
 %       for each row.
 %       
 
-
-
-
-
-
+ps = sigmoid(X*all_theta');
+[p_max, i_max]=max(ps, [], 2); % p_max is the max score while the i_max is the label 
+p = i_max;
 
 % =========================================================================
-
 
 end
