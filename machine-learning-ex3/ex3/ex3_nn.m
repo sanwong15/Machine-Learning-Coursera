@@ -1,4 +1,5 @@
-%% Machine Learning Online Class - Exercise 3 | Part 2: Neural Networks
+%% Machine Learning Online Class - Exercise 3 | Part 2: Neural Networks (Three layers)
+% San Wong (hswong1@uci.edu)
 
 %  Instructions
 %  ------------
@@ -21,7 +22,7 @@ clear ; close all; clc
 
 %% Setup the parameters you will use for this exercise
 input_layer_size  = 400;  % 20x20 Input Images of Digits
-hidden_layer_size = 25;   % 25 hidden units
+hidden_layer_size = 25;   % 25 neuron in 1 hidden layer
 num_labels = 10;          % 10 labels, from 1 to 10   
                           % (note that we have mapped "0" to label 10)
 
@@ -52,6 +53,8 @@ pause;
 fprintf('\nLoading Saved Neural Network Parameters ...\n')
 
 % Load the weights into variables Theta1 and Theta2
+% Theta1: 25*401
+% Theta2: 10*26  (25 neuron in 1 hidden layer wit 1 basis neuron)
 load('ex3weights.mat');
 
 %% ================= Part 3: Implement Predict =================

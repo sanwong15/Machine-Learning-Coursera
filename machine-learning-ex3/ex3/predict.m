@@ -22,13 +22,19 @@ p = zeros(size(X, 1), 1);
 %
 
 
+% Theta is given. a1 can be calculated by sigmoid(Theta1*X). Output(h) =
+% a*Theta2
 
+a1 = [ones(m,1) X]; % size of X: 5000*400 ; m = 5000 ; a1 becomes 5000*401
+% With Theta1 = 25*401
+z2 = a1*Theta1'; % 5000*25
+% With Theta2 = 10*26
+a2 = [ones(size(z2, 1), 1) sigmoid(z2)]; % 5000*26
+z3 = a2*Theta2';
+a3 = sigmoid(z3);
 
-
-
-
-
-
+[p_max, i_max]=max(a3, [], 2); % p_max is the max score while the i_max is the label 
+p = i_max;
 % =========================================================================
 
 
