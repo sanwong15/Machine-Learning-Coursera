@@ -1,8 +1,5 @@
 %% Machine Learning Online Class - Exercise 4 Neural Network Learning
 % Hong San Wong (hswong1@uci.edu)
-
-%  Instructions
-%  ------------
 % 
 %  This file contains code that helps you get started on the
 %  linear exercise. You will need to complete the following functions 

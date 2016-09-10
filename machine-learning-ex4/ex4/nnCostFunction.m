@@ -3,8 +3,9 @@ function [J grad] = nnCostFunction(nn_params, ...
                                    hidden_layer_size, ...
                                    num_labels, ...
                                    X, y, lambda)
-%NNCOSTFUNCTION Implements the neural network cost function for a two layer
-%neural network which performs classification
+% Hong San Wong (hswong1@uci.edu)
+% NNCOSTFUNCTION Implements the neural network cost function for a two layer
+% neural network which performs classification
 %   [J grad] = NNCOSTFUNCTON(nn_params, hidden_layer_size, num_labels, ...
 %   X, y, lambda) computes the cost and gradient of the neural network. The
 %   parameters for the neural network are "unrolled" into the vector
@@ -16,6 +17,7 @@ function [J grad] = nnCostFunction(nn_params, ...
 
 % Reshape nn_params back into the parameters Theta1 and Theta2, the weight matrices
 % for our 2 layer neural network
+% nn_params = [Theta1(:) ; Theta2(:)];
 Theta1 = reshape(nn_params(1:hidden_layer_size * (input_layer_size + 1)), ...
                  hidden_layer_size, (input_layer_size + 1));
 
@@ -31,9 +33,6 @@ Theta1_grad = zeros(size(Theta1));
 Theta2_grad = zeros(size(Theta2));
 
 % ====================== YOUR CODE HERE ======================
-% Instructions: You should complete the code by working through the
-%               following parts.
-%
 % Part 1: Feedforward the neural network and return the cost in the
 %         variable J. After implementing Part 1, you can verify that your
 %         cost function computation is correct by verifying the cost
@@ -61,6 +60,26 @@ Theta2_grad = zeros(size(Theta2));
 %               the regularization separately and then add them to Theta1_grad
 %               and Theta2_grad from Part 2.
 %
+
+% Part 1 (Feedforward)
+% y is a 5000x1 label vector (1 - 10)
+% First, unroll it so that each label is a 10x1 vector
+I = eye(num_labels);
+Y = zeros(m, num_labels); % m by num_labels => 5000x10
+for i=1:m
+    Y(i,:) = I(y(i),:);
+end
+
+% eye gives the following: let's say it's a 3x3
+% I = 1 0 0
+%     0 1 0
+%     0 0 1
+%    
+% y(i) = label 2 (which means y(i) = 2)
+% Y(i,:) = I(2,:) => 0 1 0
+
+% Feedforward
+
 
 
 
