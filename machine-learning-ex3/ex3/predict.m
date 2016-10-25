@@ -27,7 +27,7 @@ p = zeros(size(X, 1), 1);
 
 a1 = [ones(m,1) X]; % size of X: 5000*400 ; m = 5000 ; a1 becomes 5000*401
 % With Theta1 = 25*401
-z2 = a1*Theta1'; % 5000*25
+z2 = a1*Theta1'; % 5000*25 (Theta1 is 25 by 401)
 % With Theta2 = 10*26
 a2 = [ones(size(z2, 1), 1) sigmoid(z2)]; % 5000*26
 z3 = a2*Theta2';

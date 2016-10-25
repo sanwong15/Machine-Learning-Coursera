@@ -1,5 +1,5 @@
 %% Machine Learning Online Class - Exercise 3 | Part 2: Neural Networks (Three layers)
-% San Wong (hswong1@uci.edu)
+% Hong San Wong (hswong1@uci.edu)
 
 %  Instructions
 %  ------------

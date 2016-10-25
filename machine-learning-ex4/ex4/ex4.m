@@ -142,6 +142,8 @@ initial_nn_params = [initial_Theta1(:) ; initial_Theta2(:)];
 fprintf('\nChecking Backpropagation... \n');
 
 %  Check gradients by running checkNNGradients
+% As there is no arguement assigned (value of lambda) by default, lambda =
+% 0 (i.e. no regularization)
 checkNNGradients;
 
 fprintf('\nProgram paused. Press enter to continue.\n');
@@ -157,13 +159,14 @@ fprintf('\nChecking Backpropagation (w/ Regularization) ... \n')
 
 %  Check gradients by running checkNNGradients
 lambda = 3;
+
 checkNNGradients(lambda);
 
 % Also output the costFunction debugging values
 debug_J  = nnCostFunction(nn_params, input_layer_size, ...
                           hidden_layer_size, num_labels, X, y, lambda);
 
-fprintf(['\n\nCost at (fixed) debugging parameters (w/ lambda = 10): %f ' ...
+fprintf(['\n\nCost at (fixed) debugging parameters (w/ lambda = 3): %f ' ...
          '\n(this value should be about 0.576051)\n\n'], debug_J);
 
 fprintf('Program paused. Press enter to continue.\n');
@@ -183,8 +186,11 @@ fprintf('\nTraining Neural Network... \n')
 %  value to see how more training helps.
 options = optimset('MaxIter', 50);
 
-%  You should also try different values of lambda
-lambda = 1;
+
+%  You should also try different values of lambda (0.5 perform way better
+%  than 1) which means we are kinda overfitting at the first place
+lambda = 0.5;
+
 
 % Create "short hand" for the cost function to be minimized
 costFunction = @(p) nnCostFunction(p, ...

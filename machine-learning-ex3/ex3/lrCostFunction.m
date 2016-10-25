@@ -37,17 +37,20 @@ grad = zeros(size(theta));
 %
 
 h = sigmoid(X*theta);
-theta1 = [0;theta(2:end)]; % for i = 0, it remains zeros. so we create a new theta that starts from i=1, which will be trained
-J = (1/m)*((-y)'*(log(h))-(1-y)'*(log(1-h)))+(lambda/(2*m))*(theta1'*theta1);
+% theta(2:end) is a column vector. theta1 replace the first
+% element with a zero
+
+% X is a 5000 by 400 matrix 
+% Theta will need to be a 400 by 10 matrix so that 
+% X*theta becomes a 5000 by 10 matrix that shows the score for each class
+
+% While calculating regularization, we do not includ the first term in theta
+theta1 = [0;theta(2:end)];
+reg = (lambda/(2*m))*(theta1'*theta1);
+J = (1/m)*((-y)'*(log(h))-(1-y)'*(log(1-h)))+reg;
 
 % Grad
 grad = (1/m)*(X'*(h - y))+(lambda/m)*theta1;
-
-
-
-
-
-
 
 
 % =============================================================

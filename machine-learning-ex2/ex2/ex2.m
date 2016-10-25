@@ -1,5 +1,5 @@
 %% Machine Learning Class - Exercise 2: Logistic Regression
-%  San Wong (hswong1@uci.edu)
+%  Hong San Wong (hswong1@uci.edu)
 %  ## Build a logistic regression model to predict whether a student gets
 %  admitted into a university
 %
@@ -50,7 +50,7 @@ pause;
 %  Setup the data matrix appropriately, and add ones for the intercept term
 [m, n] = size(X);
 
-% Add intercept term to x and X_test
+% Add intercept term to x and X_test (aka ThetaZero)
 X = [ones(m, 1) X];
 
 % Initialize fitting parameters

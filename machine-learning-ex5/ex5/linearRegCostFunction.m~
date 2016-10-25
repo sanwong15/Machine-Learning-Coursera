@@ -23,8 +23,7 @@ grad = zeros(size(theta));
 
 % h_theta(X)
 % X is a 12x1 vector
-% Y is a 12x1 vector
-h = X*theta;
+h = 
 J = (1/2m)*
 
 

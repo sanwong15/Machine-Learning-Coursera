@@ -1,5 +1,5 @@
 %% Machine Learning Online Class - Exercise 2: Logistic Regression
-%  San Wong (hswong1@uci.edu)
+%  Hong San Wong (hswong1@uci.edu)
 %  Instructions
 %  ------------
 % 
@@ -53,8 +53,8 @@ hold off;
 
 % Add Polynomial Features
 
-% Note that mapFeature also adds a column of ones for us, so the intercept
-% term is handled
+% Note that mapFeature also adds ONE for each trainning data, so the intercept
+% term is handled for each training data. 
 X = mapFeature(X(:,1), X(:,2));
 
 % Initialize fitting parameters (initial theta is zero array)

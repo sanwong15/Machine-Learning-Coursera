@@ -1,4 +1,6 @@
 %% Machine Learning Online Class
+% Hong San Wong (hswong1@uci.edu)
+% 
 %  Exercise 5 | Regularized Linear Regression and Bias-Variance
 %
 %  Instructions
