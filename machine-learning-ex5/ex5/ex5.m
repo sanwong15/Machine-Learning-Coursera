@@ -50,6 +50,7 @@ pause;
 %
 
 theta = [1 ; 1];
+% Set lambda = 1
 J = linearRegCostFunction([ones(m, 1) X], y, theta, 1);
 
 fprintf(['Cost at theta = [1 ; 1]: %f '...
@@ -166,7 +167,8 @@ pause;
 %  lambda to see how the fit and learning curve change.
 %
 
-lambda = 0;
+% lambda to try (0; 0.5; 1; 5; 3; 1.5; 1.3)
+lambda = 1.3;
 [theta] = trainLinearReg(X_poly, y, lambda);
 
 % Plot training data and fit
@@ -220,3 +222,8 @@ end
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+
+% Optional (Average error_train ad error_val)
+run = 50;
+lambdaToUse = 0.01;
+randomSelectedExamplePlot(X,y,Xval,yval,lambdaToUse,run);
