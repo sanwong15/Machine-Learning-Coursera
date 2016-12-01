@@ -1,4 +1,6 @@
 function sim = gaussianKernel(x1, x2, sigma)
+% Hong San Wong (hswong1@uci.edu)
+%
 %RBFKERNEL returns a radial basis function kernel between x1 and x2
 %   sim = gaussianKernel(x1, x2) returns a gaussian kernel between x1 and x2
 %   and returns the value in sim
@@ -14,10 +16,11 @@ sim = 0;
 %               and x2 computed using a Gaussian kernel with bandwidth
 %               sigma
 %
-%
+%   Input x1, x2, sigma
 
-
-
+diff = x1-x2;
+a = (diff'*diff)/(-2*(sigma.^2));
+sim = exp(a);
 
 
 

@@ -1,4 +1,5 @@
 function [X_norm, mu, sigma] = featureNormalize(X)
+%Hong San Wong (hswong1@uci.edu)
 %FEATURENORMALIZE Normalizes the features in X 
 %   FEATURENORMALIZE(X) returns a normalized version of X where
 %   the mean value of each feature is 0 and the standard deviation

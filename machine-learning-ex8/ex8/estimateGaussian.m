@@ -1,4 +1,5 @@
 function [mu sigma2] = estimateGaussian(X)
+%HONG SAN WONG (hswong1@uci.edu)
 %ESTIMATEGAUSSIAN This function estimates the parameters of a 
 %Gaussian distribution using the data in X
 %   [mu sigma2] = estimateGaussian(X), 
@@ -8,7 +9,7 @@ function [mu sigma2] = estimateGaussian(X)
 % 
 
 % Useful variables
-[m, n] = size(X);
+[m, n] = size(X); %m data and each data is n dimensional
 
 % You should return these values correctly
 mu = zeros(n, 1);
@@ -22,11 +23,8 @@ sigma2 = zeros(n, 1);
 %
 
 
-
-
-
-
-
+mu = mean(X)';
+sigma2 = var(X,1)';
 
 
 

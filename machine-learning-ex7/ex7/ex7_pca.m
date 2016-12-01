@@ -1,4 +1,5 @@
 %% Machine Learning Online Class
+%  Hong San Wong (hswong1@uci.edu)
 %  Exercise 7 | Principle Component Analysis and K-Means Clustering
 %
 %  Instructions

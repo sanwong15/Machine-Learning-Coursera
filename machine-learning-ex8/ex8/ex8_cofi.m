@@ -1,4 +1,5 @@
 %% Machine Learning Online Class
+%  Hong San Wong (hswong1@uci.edu)
 %  Exercise 8 | Anomaly Detection and Collaborative Filtering
 %
 %  Instructions

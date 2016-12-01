@@ -1,4 +1,6 @@
 function x = emailFeatures(word_indices)
+% Hong San Wong (hswong1@uci.edu)
+% 
 %EMAILFEATURES takes in a word_indices vector and produces a feature vector
 %from the word indices
 %   x = EMAILFEATURES(word_indices) takes in a word_indices vector and 
@@ -49,7 +51,10 @@ x = zeros(n, 1);
 %
 
 
-
+% Input: word_indices
+for i=1:length(word_indices)
+    x(word_indices(i))=1;
+end
 
 
 

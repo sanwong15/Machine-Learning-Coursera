@@ -1,4 +1,6 @@
 function word_indices = processEmail(email_contents)
+% Hong San Wong (hswong1@uci.edu)
+%
 %PROCESSEMAIL preprocesses a the body of an email and
 %returns a list of word_indices 
 %   word_indices = PROCESSEMAIL(email_contents) preprocesses 
@@ -99,8 +101,14 @@ while ~isempty(email_contents)
 
 
 
-
-
+% add the index of str to word_indices if it is in the vocabulary
+% variable: str, carries the email info
+% word_indices is what we are going to return
+    for i=1:length(vocabList)
+        if(strcmp(str, vocabList{i}))
+            word_indices = [word_indices ; i];
+        end
+    end
 
 
 

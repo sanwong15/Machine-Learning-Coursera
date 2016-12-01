@@ -1,4 +1,5 @@
 %% Machine Learning Online Class
+%  Hong San Wong (hswong1@uci.edu)
 %  Exercise 6 | Spam Classification with SVMs
 %
 %  Instructions
